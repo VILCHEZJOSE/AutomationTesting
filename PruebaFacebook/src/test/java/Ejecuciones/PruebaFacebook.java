@@ -1,6 +1,7 @@
 package Ejecuciones;
 
 
+import Entidades.Facebook.Ent_LoginFacebook;
 import Escenarios.Facebook.Esc_PaginaInicioFacebook;
 import Recursos.Navegador.Pag_Navegador;
 import org.junit.After;
@@ -10,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 
 public class PruebaFacebook {
     WebDriver driver;
+    Ent_LoginFacebook entloginf;
+    Esc_PaginaInicioFacebook esc_paginainiciof;
 
 
     @Before
@@ -21,17 +24,28 @@ public class PruebaFacebook {
 
     @After
     public void PostEjecucion() {
-     //driver.close();
+        //driver.close();
+    }
 
+    public void InstanciasBasicas(){
+        esc_paginainiciof = new Esc_PaginaInicioFacebook(driver);
+        entloginf = new Ent_LoginFacebook();
+        LecturaDatos();
+
+        }
+
+
+    public void LecturaDatos(){
+
+        entloginf.clave="123323234555";
+        entloginf.usuario="JOSEVILCHEZMASQUEZ";
     }
 
     @Test
     public void RealizarConsultaIngreso() {
-        Esc_PaginaInicioFacebook esc_paginainicio = new Esc_PaginaInicioFacebook(driver);
-        esc_paginainicio.ConsultarIngresoFacebook(driver);
+        InstanciasBasicas();
+        esc_paginainiciof.ConsultarIngresoFacebook(driver,entloginf.clave, entloginf.usuario);
     }
-
-
 
     }
 

@@ -8,17 +8,18 @@ public class Esc_PaginaInicioFacebook {
     WebDriver driver;
 
     public Esc_PaginaInicioFacebook(WebDriver _driver){
+
         driver = _driver;
     }
-    public void ConsultarIngresoFacebook(WebDriver driver){
+    public void ConsultarIngresoFacebook(WebDriver driver, String clave, String usuario){
 
         Rec_Global rec_global = new Rec_Global(driver);
         String ciudadOrigen = "//*[@name='email']";
         String ciudadDestino = "//*[@name='pass']";
 
 
-        rec_global.Escribir("JOSE ROGER VILCHEZ MASQUEZ", ciudadOrigen);
-        rec_global.Escribir("123456789", ciudadDestino);
+        rec_global.Escribir(usuario, ciudadOrigen);
+        rec_global.Escribir(clave, ciudadDestino);
 
     }
 }
