@@ -11,7 +11,7 @@ public class Esc_PaginaInicioFacebook {
 
         driver = _driver;
     }
-    public void ConsultarIngresoFacebook(String clave, String usuario){
+    public void ConsultarIngresoFacebook(WebDriver driver, String clave, String usuario){
 
         Rec_Global rec_global = new Rec_Global(driver);
         String ciudadOrigen = "//*[@name='email']";
