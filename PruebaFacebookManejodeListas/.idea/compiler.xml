@@ -10,6 +10,7 @@
         <module name="Busqueda_Vuelos" />
         <module name="Busqueda_Google" />
         <module name="PruebaFacebook" />
+        <module name="PruebaFacebookManejodelistas" />
       </profile>
     </annotationProcessing>
   </component>

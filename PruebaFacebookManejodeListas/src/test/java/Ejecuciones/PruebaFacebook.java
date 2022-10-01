@@ -44,7 +44,7 @@ public class PruebaFacebook {
     @Test
     public void RealizarConsultaIngreso() {
         InstanciasBasicas();
-        esc_paginainiciof.ConsultarIngresoFacebook(driver,entloginf.clave, entloginf.usuario);
+        esc_paginainiciof.ConsultarIngresoFacebook(entloginf.clave, entloginf.usuario);
     }
 
     }
